@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Update Bus Location</h1>
+    <form id="locationForm">
+        <input type="text" id="busId" placeholder="Bus ID" required>
+        <input type="text" id="latitude" placeholder="Latitude" required>
+        <input type="text" id="longitude" placeholder="Longitude" required>
+        <button type="submit">Update Location</button>
+    </form>
+
+    <h2>Current Bus Locations</h2>
+    <ul id="busList"></ul>
+
+    <script>
+        $(document).ready(function() {
+            $('#locationForm').on('submit', function(e) {
+                e.preventDefault();
+                const busId = $('#busId').val();
+                const latitude = $('#latitude').val();
+                const longitude = $('#longitude').val();
+
+                // Placeholder for update location logic
+                alert(`Updated location for Bus ID: ${busId}, Lat: ${latitude}, Long: ${longitude}`);
+                loadLocations();
+            });
+
+            function loadLocations() {
+                // Placeholder for loading locations logic
+                $('#busList').empty();
+                $('#busList').append('<li>Bus ID: 1, Lat: 10.0, Long: 20.0</li>');
+            }
+
+            loadLocations();
+        });
+    </script>
+</body>
+</html>
